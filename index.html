@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hussain Gandhi | DevOps Engineer</title>
+    <meta name="description"
+        content="Portfolio of Hussain Gandhi, DevOps Engineer at Improwised Technologies Pvt. Ltd., specializing in Kubernetes, GitOps, and Observability.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Sticky Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#hero">&gt; hgandhi<span class="cursor-blink">_</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="btn-outline">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="section hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="mono-subtitle accent-text">hussain.gandhi@your-help:~$ ./streamline-platform.sh</p>
+                <h1 class="hero-title">
+                    <span id="typing-text"></span><span class="cursor-blink">_</span>
+                </h1>
+                <h2 class="hero-subtitle">Building scalable infrastructure &amp; automating chaos.</h2>
+                <p class="hero-desc">
+                    I am a DevOps Engineer focusing on scalable infrastructure, GitOps methodologies, and system
+                    observability.
+                    I bridge the gap between development and operations to ensure reliable, fast, and secure software
+                    delivery.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="https://github.com/hussain-gandhi" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-secondary">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="profile.png" alt="Hussain Gandhi" class="hero-image">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-text">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hello! My name is Hussain and I enjoy building and managing robust infrastructure. My journey in
+                        tech started with a deep curiosity about how systems communicate, which naturally led me into
+                        the world of DevOps and Cloud Native engineering.
+                    </p>
+                    <p>
+                        Currently, I am a DevOps Engineer at <strong>Improwised Technologies Pvt. Ltd.</strong>, where
+                        my focus is on optimizing deployments, managing Kubernetes clusters, and ensuring our systems
+                        are highly observable and resilient.
+                    </p>
+                    <p>
+                        When I'm not writing infrastructure as code, configuring CI/CD pipelines, or tuning monitoring
+                        dashboards, I enjoy exploring new CNCF projects and contributing to the tech community.
+                    </p>
+                </div>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">hgandhi@local:~$</span> whoami</p>
+                        <p class="output">Hussain Gandhi</p>
+                        <p><span class="prompt">hgandhi@local:~$</span> cat current_focus.txt</p>
+                        <p class="output">Kubernetes, GitOps (FluxCD), and Prometheus/Grafana Stack.</p>
+                        <p><span class="prompt">hgandhi@local:~$</span> <span class="cursor-blink block"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-text">02.</span> Skills Matrix</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <h3>Container Orchestration</h3>
+                    <ul class="skill-list">
+                        <li>Kubernetes (K8s)</li>
+                        <li>EKS / GKE / AKS</li>
+                        <li>k3s / k3d</li>
+                        <li>Docker / Podman / Containerd</li>
+                        <li>GatewayAPI / Ingress</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fa-solid fa-code-merge"></i></div>
+                    <h3>GitOps & IaC</h3>
+                    <ul class="skill-list">
+                        <li>FluxCD & ArgoCD</li>
+                        <li>Terraform / OpenTofu</li>
+                        <li>Terragrunt</li>
+                        <li>Helm</li>
+                        <li>CI/CD (GitHub Actions, CircleCI)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Observability</h3>
+                    <ul class="skill-list">
+                        <li>Prometheus</li>
+                        <li>Grafana / Loki</li>
+                        <li>Alertmanager</li>
+                        <li>ELK / EFK Stack</li>
+                        <li>Datadog</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fa-brands fa-linux"></i></div>
+                    <h3>OS & Environments</h3>
+                    <ul class="skill-list">
+                        <li>Linux (Arch, Ubuntu, CentOS, Alpine)</li>
+                        <li>Bash / Python Scripting</li>
+                        <li>Networking (TCP/IP, DNS)</li>
+                        <li>Nginx / Traefik</li>
+                        <li>Cloud Platforms (AWS, GCP, Azure)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-text">03.</span> Professional Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>DevOps Engineer</h3>
+                            <span class="timeline-date">2022 - Present</span>
+                        </div>
+                        <h4 class="company">Improwised Technologies Pvt. Ltd.</h4>
+                        <ul class="job-description">
+                            <li>Managing and executing complex cloud-to-on-prem migrations, ensuring zero data loss and
+                                minimal downtime.</li>
+                            <li>Syncing staging and production environments to maintain consistency across the
+                                deployment lifecycle.</li>
+                            <li>Optimizing Kubernetes node scaling and resource allocation to improve cost-efficiency
+                                and performance.</li>
+                            <li>Implementing robust monitoring and alerting systems using Prometheus, Alertmanager, and
+                                Grafana.</li>
+                            <li>Streamlining deployment workflows adopting GitOps methodologies using FluxCD.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Placeholder for future roles -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>System Administrator / Junior DevOps</h3>
+                            <span class="timeline-date">2019 - 2022</span>
+                        </div>
+                        <h4 class="company">Previous Company</h4>
+                        <ul class="job-description">
+                            <li>Managed Linux-based server infrastructure and routine maintenance.</li>
+                            <li>Automated repetitive tasks using Bash and Python scripts.</li>
+                            <li>Assisted in containerizing legacy applications using Docker.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="accent-text">04.</span> Featured Implementations</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="fa-regular fa-folder project-icon"></i>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub Link"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" aria-label="External Link"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Beautifying Prometheus Slack Alerts</h3>
+                        <p class="project-desc">
+                            Redesigned and enhanced the default Prometheus Alertmanager notifications sent to Slack.
+                            Created custom Go templates to format alerts with richer context, clear color-coding (firing
+                            vs. resolved), and direct links to runbooks and Grafana dashboards, significantly reducing
+                            incident response time.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Prometheus</li>
+                            <li>Alertmanager</li>
+                            <li>Go Templates</li>
+                            <li>Slack API</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="fa-regular fa-folder project-icon"></i>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub Link"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">K3s Local Testing Environments</h3>
+                        <p class="project-desc">
+                            Developed a standardized, reproducible local Kubernetes testing environment utilizing K3s
+                            and Docker (k3d). This allowed developers to spin up full-stack environments locally that
+                            mirrored production configurations, accelerating the testing and debugging phases of
+                            microservices.
+                        </p>
+                        <ul class="project-tech">
+                            <li>K3s</li>
+                            <li>Docker</li>
+                            <li>Bash</li>
+                            <li>Make</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="fa-regular fa-folder project-icon"></i>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub Link"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">FluxCD Customization Management</h3>
+                        <p class="project-desc">
+                            Architected a scalable directory structure and Kustomization strategy for FluxCD. Managed
+                            multiple clusters (staging, UAT, production) from a single monorepo, utilizing HelmReleases
+                            and post-build variable substitutions to keep configurations DRY and strictly
+                            version-controlled.
+                        </p>
+                        <ul class="project-tech">
+                            <li>FluxCD</li>
+                            <li>Kubernetes</li>
+                            <li>Kustomize</li>
+                            <li>Helm</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container contact-container">
+            <p class="mono-subtitle accent-text">05. What's Next?</p>
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-desc">
+                Whether you have a question about infrastructure, want to discuss cloud native technologies, or just
+                want to say hi, my inbox is always open. I'll try my best to get back to you!
+            </p>
+            <a href="mailto:hussain@example.com" class="btn btn-primary btn-large">Say Hello <i
+                    class="fa-regular fa-paper-plane"></i></a>
+
+            <div class="social-links-large">
+                <a href="https://github.com/hussain-gandhi" target="_blank" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/hussain-gandhi" target="_blank" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/hussain-gandhi" target="_blank" aria-label="Twitter"><i
+                        class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Built with <span class="accent-text">&lt;/&gt;</span> by Hussain Gandhi</p>
+            <p class="mono-text small-text">© 2026 Hussain Gandhi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
