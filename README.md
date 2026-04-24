@@ -33,7 +33,7 @@ Since the project relies entirely on static files without a build process or a f
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/hussain-gandhi/hussain.gandhi.biz.git
+   git clone https://github.com/HussainTechSavvy/hussain.gandhi.biz.git
    ```
 2. Simply open `docs/index.html` in your favorite web browser, or use a local server like `Live Server` in VSCode or Python's HTTP server:
    ```bash
