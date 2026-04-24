@@ -79,4 +79,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Active Section Highlight on Scroll ---
+    const sections = document.querySelectorAll('section, header');
+    const navItems = document.querySelectorAll('.nav-links li a');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-75px 0px -50% 0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${id}`) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
 });

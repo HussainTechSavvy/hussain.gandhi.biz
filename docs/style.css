@@ -159,7 +159,8 @@ a:hover {
     border-radius: 4px;
     color: var(--accent-primary);
 }
-.btn-outline:hover {
+.btn-outline:hover,
+.btn-outline.active {
     background: rgba(0, 240, 255, 0.1);
 }
 
@@ -212,7 +213,8 @@ a:hover {
     color: var(--text-main);
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active {
     color: var(--accent-primary);
 }
 
