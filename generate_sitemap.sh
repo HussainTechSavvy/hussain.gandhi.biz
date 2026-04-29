@@ -15,14 +15,14 @@ EOF
 find "$DOCS_DIR" -name "*.html" -type f | while read -r file; do
     # Remove the "docs/" prefix
     rel_path="${file#$DOCS_DIR/}"
-    
+
     # If the file is index.html, it maps to the root URL "/"
     if [ "$rel_path" == "index.html" ]; then
         url="$BASE_URL/"
     else
         url="$BASE_URL/$rel_path"
     fi
-    
+
     # Get last modified time of the file in W3C format
     lastmod=$(date -r "$file" "+%Y-%m-%d")
 

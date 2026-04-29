@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // --- Typing Effect for Hero Section ---
     const typingTextElement = document.getElementById('typing-text');
     const textToType = "Hussain Gandhi";
     let index = 0;
-    const typingSpeed = 100; // milliseconds per character
+    const typingSpeed = prefersReducedMotion ? 0 : 100;
 
     function typeText() {
         if (index < textToType.length) {
             typingTextElement.textContent += textToType.charAt(index);
             index++;
+            if (prefersReducedMotion) {
+                typingTextElement.textContent = textToType;
+                return;
+            }
             setTimeout(typeText, typingSpeed);
         }
     }
@@ -32,9 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li a');
 
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', toggleMenu);
+
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
+
+    function toggleMenu() {
         navLinks.classList.toggle('active');
-        // Toggle icon between bars and times (close)
         const icon = hamburger.querySelector('i');
         if(navLinks.classList.contains('active')) {
             icon.classList.remove('fa-bars');
@@ -43,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.remove('fa-xmark');
             icon.classList.add('fa-bars');
         }
-    });
+    }
 
     // Close mobile menu when a link is clicked
     links.forEach(link => {
@@ -56,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Smooth Scrolling for Anchor Links ---
-    // (Optional enhancement over CSS scroll-behavior for better browser support or offset control)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -67,13 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if(targetElement) {
                 // Offset for sticky header
-                const headerOffset = 70;
+                const headerOffset = 72;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
   
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: "smooth"
+                    behavior: prefersReducedMotion ? "instant" : "smooth"
                 });
             }
         });
