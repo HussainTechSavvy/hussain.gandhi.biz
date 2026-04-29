@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/favicon.png" alt="" align="center" height="64" />
+<img src="docs/favicon.svg" alt="" align="center" height="64" />
 
 # hussain.gandhi.biz
 
@@ -51,7 +51,7 @@ The design leans into a **terminal-inspired OLED dark theme** with a typing-effe
 │   ├── style.css          # Design tokens, layout, components, animations
 │   ├── script.js          # Typing effect, nav, scroll-to, observer logic
 │   ├── profile.png        # Hero avatar
-│   ├── favicon.png        # Browser favicon
+│   ├── favicon.svg        # SVG vector favicon
 │   ├── CNAME              # Custom domain record
 │   ├── robots.txt         # Crawler directives
 │   └── sitemap.xml        # Search engine sitemap
