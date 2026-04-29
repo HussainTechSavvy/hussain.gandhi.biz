@@ -1,53 +1,105 @@
-# Hussain Gandhi | DevOps Portfolio
+<div align="center">
 
-A modern, responsive, and fast-loading personal portfolio website designed for a DevOps/Platform Engineering aesthetic. The site features a sleek, terminal-inspired dark mode theme, complete with a typing effect and glowing accents.
+<img src="docs/favicon.png" alt="" align="center" height="64" />
 
-## 🚀 Features
-- **Zero Build Step**: Built with raw HTML, Vanilla CSS, and JavaScript. Lightning-fast and highly maintainable.
-- **Terminal Aesthetic**: Cyberpunk/developer-focused design with monospaced typography, dark backgrounds (`#0d1117`), and electric blue accents (`#00f0ff`).
-- **Responsive Layout**: Fully mobile-friendly with CSS Grid and Flexbox, including a collapsible hamburger navigation menu.
-- **Dynamic Interactions**: Features a custom JavaScript typing effect in the hero section and smooth scroll navigation.
+# hussain.gandhi.biz
 
-## 🛠️ Technology Stack
-- **Structure**: HTML5
-- **Styling**: Vanilla CSS (Custom properties, Flexbox, Grid)
-- **Logic**: Vanilla JavaScript
-- **Icons**: FontAwesome 6
-- **Fonts**: Google Fonts ('Inter' & 'JetBrains Mono')
+*Personal portfolio of Hussain Gandhi — DevOps Engineer specializing in Kubernetes, GitOps, and Observability.*
 
-## 📂 Repository Structure
-All static files intended for deployment are located in the `docs/` directory.
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-deployed-22C55E?style=flat-square&logo=github)](https://hussain.gandhi.biz)
+[![Zero Dependencies](https://img.shields.io/badge/build-zero%20deps-22C55E?style=flat-square)](#technology-stack)
+
+[Overview](#overview) • [Features](#features) • [Tech Stack](#technology-stack) • [Structure](#project-structure) • [Development](#local-development) • [Deployment](#deployment)
+
+</div>
+
+## Overview
+
+A fast, accessible, single-page portfolio site built with plain HTML, CSS, and JavaScript. No frameworks, no build steps, no JavaScript runtime — just static files served from GitHub Pages.
+
+The design leans into a **terminal-inspired OLED dark theme** with a typing-effect hero, scroll-driven reveal animations, and a simulated terminal window. Every section tells a piece of the story: who Hussain is, what he works on, and how to reach him.
+
+## Features
+
+- **Zero Build Step** — Raw HTML, Vanilla CSS (custom properties), and vanilla JS. No npm, no bundler, no overhead.
+- **Terminal Aesthetic** — OLED black backgrounds, success-green accents, monospaced typography (`Space Grotesk` + `Archivo`), and an interactive terminal component in the about section.
+- **Typing Effect** — Name animation in the hero with a blinking cursor. Instant-render fallback when `prefers-reduced-motion` is set.
+- **Scroll Animations** — Elements fade in on scroll via `IntersectionObserver`. All animations respect the user's motion preferences.
+- **Responsive** — Grid and Flexbox layouts that adapt from small phones to large desktops. Collapsible hamburger navigation on mobile.
+- **Accessible** — Skip-to-content link, visible `:focus-visible` rings, keyboard-navigable menu, semantic HTML, and `aria-label` on icon-only controls.
+- **SEO Ready** — Meta tags, `robots.txt`, and `sitemap.xml` included.
+
+## Technology Stack
+
+| Layer | Technology |
+|-------|------------|
+| Structure | HTML5 |
+| Styling | Vanilla CSS (custom properties, CSS Grid, Flexbox) |
+| Logic | Vanilla JavaScript |
+| Icons | Font Awesome 7.0.1 |
+| Fonts | Google Fonts — Archivo (body) & Space Grotesk (mono) |
+| Hosting | GitHub Pages |
+| Domain | `hussain.gandhi.biz` |
+
+## Project Structure
+
 ```
 .
-├── docs/
-│   ├── index.html       # Main HTML structure
-│   ├── style.css        # Custom styles and theming
-│   ├── script.js        # Interactive logic (typing effect, smooth scroll)
-│   └── profile.png      # Profile image
-├── LICENSE
+├── docs/                  # Deployed static site (GitHub Pages source)
+│   ├── index.html         # Single-page app — 6 sections
+│   ├── style.css          # Design tokens, layout, components, animations
+│   ├── script.js          # Typing effect, nav, scroll-to, observer logic
+│   ├── profile.png        # Hero avatar
+│   ├── favicon.png        # Browser favicon
+│   ├── CNAME              # Custom domain record
+│   ├── robots.txt         # Crawler directives
+│   └── sitemap.xml        # Search engine sitemap
+├── generate_sitemap.sh    # Utility to regenerate the sitemap
 └── README.md
 ```
 
-## 💻 Local Development
-Since the project relies entirely on static files without a build process or a framework like React/Vue, you don't need `npm` or any complex tooling.
+## Local Development
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/HussainTechSavvy/hussain.gandhi.biz.git
-   ```
-2. Simply open `docs/index.html` in your favorite web browser, or use a local server like `Live Server` in VSCode or Python's HTTP server:
-   ```bash
-   python3 -m http.server 8000 --directory docs/
-   ```
+No toolchain required. Pick any method:
 
-## 🌐 Deployment
-This website is designed to be effortlessly deployed to **GitHub Pages**.
+<details open>
+<summary><b>Python HTTP server</b> (recommended)</summary>
 
-1. Push your code to the `main` branch.
-2. In your GitHub repository, navigate to **Settings** > **Pages**.
-3. Under **Build and deployment**, set the **Source** to `Deploy from a branch`.
-4. Set the **Branch** to `main` and the **Folder** to `/docs`.
-5. Click **Save**. Your site will be live within a few minutes!
+```bash
+git clone https://github.com/HussainTechSavvy/hussain.gandhi.biz.git
+cd hussain.gandhi.biz
+python3 -m http.server 8000 --directory docs/
+```
 
-## 📝 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Open `http://localhost:8000` in your browser.
+
+</details>
+
+<details>
+<summary><b>VS Code Live Server</b></summary>
+
+1. Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
+2. Right-click `docs/index.html` → **Open with Live Server**.
+
+</details>
+
+<details>
+<summary><b>Open directly</b></summary>
+
+Just open `docs/index.html` in any browser. Some features (like the CNAME redirect) only work when served via HTTP, but the UI renders fine for quick previews.
+
+</details>
+
+## Deployment
+
+The site is deployed to **GitHub Pages** from the `docs/` directory on the `main` branch.
+
+> [!TIP]
+> To deploy your own fork, go to **Settings** → **Pages**, set **Source** to `Deploy from a branch`, choose `main` and `/docs`.
+
+```bash
+git push origin main   # GitHub Pages picks up docs/ automatically
+```
+
+The custom domain is configured via the `docs/CNAME` file. GitHub Pages sends a deployment notification on every push to `main`.
