@@ -80,6 +80,8 @@ a:hover {
     margin-bottom: 24px;
     letter-spacing: 0.5px;
     color: var(--accent-primary);
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 /* --- Layout Utilities --- */
@@ -91,6 +93,12 @@ a:hover {
 
 .section {
     padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
 }
 
 .bg-alt {
@@ -241,25 +249,37 @@ a:hover {
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        right: -100%;
+        right: 0;
         top: 80px;
         flex-direction: column;
         background-color: var(--bg-alt);
         width: 100%;
         text-align: center;
-        transition: var(--transition);
         padding: 32px 0;
         gap: 24px;
         border-bottom: 1px solid var(--border-color);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
     }
     #navbar.scrolled .nav-links {
         top: 64px;
     }
     .nav-links.active {
-        right: 0;
+        transform: translateX(0);
     }
     .hamburger {
         display: block;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 48px;
+        white-space: normal;
+    }
+    .section-title::after {
+        max-width: 120px;
+        flex-shrink: 1;
+        min-width: 40px;
     }
 }
 
@@ -322,6 +342,16 @@ a:hover {
     }
 }
 
+@media (max-width: 480px) {
+    .hero-cta {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .hero-cta .btn {
+        width: 100%;
+    }
+}
+
 .hero-title {
     font-size: clamp(3rem, 7vw, 5rem);
     margin-bottom: 16px;
@@ -341,6 +371,7 @@ a:hover {
     max-width: 600px;
     margin-bottom: 40px;
     color: var(--text-muted);
+    overflow-wrap: break-word;
 }
 
 .hero-cta {
@@ -416,6 +447,8 @@ a:hover {
     font-size: 0.95rem;
     color: var(--text-main);
     line-height: 1.7;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .terminal-body p {
@@ -443,6 +476,12 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 32px;
+}
+
+@media (max-width: 360px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-category {
@@ -592,6 +631,15 @@ a:hover {
         align-items: flex-start;
         gap: 10px;
     }
+    .timeline-item {
+        padding-left: 40px;
+    }
+    .timeline::after {
+        left: 16px;
+    }
+    .timeline-dot {
+        left: 9px;
+    }
 }
 
 /* --- Projects Section --- */
@@ -599,6 +647,12 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 32px;
+}
+
+@media (max-width: 400px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-card {
@@ -742,7 +796,7 @@ button:focus-visible,
 }
 
 .skip-to-content {
-    position: absolute;
+    position: fixed;
     top: -100%;
     left: 16px;
     background-color: var(--accent-primary);
